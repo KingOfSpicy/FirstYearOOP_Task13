@@ -17,21 +17,22 @@ namespace OOP_CheWeiHsuTask13
                 try
                 {
                     sqlConnection.Open();
-                    //string sql = "UPDATE Dentist SET TelNum=@TelNum WHERE Name=@Name";
+                    string sql = "UPDATE Dentist SET TelNum=@TelNum WHERE Name=@Name";
                     //string sql = "DELETE FROM Dentist WHERE Name=@Name";
-                    string sql = "INSERT INTO Dentist(Name, TelNum) VALUES(@Name, @TelNum)";
+                    //string sql = "INSERT INTO Dentist(Name, TelNum) VALUES(@Name, @TelNum)";
                     SqlCommand sqlCommand = new SqlCommand(sql, sqlConnection);
                     SqlParameter sqlParameter = new SqlParameter
                     {
-                        ParameterName = "@Name",
-                        Value = "Gyro Gearloose"
+                        ParameterName = "@TelNum",
+                        Value = "123 23456789"
+                        
 
                     };//修改電話號碼
                     sqlCommand.Parameters.Add(sqlParameter);
                     sqlParameter = new SqlParameter
                     {
-                        ParameterName = "@TelNum",
-                        Value = "040 16789321"
+                        ParameterName = "@Name",
+                        Value = "Gyro Gearloose"
                     };
                     sqlCommand.Parameters.Add(sqlParameter);
                     sqlCommand.ExecuteNonQuery();

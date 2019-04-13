@@ -20,7 +20,7 @@ namespace OOP_CheWeiHsuTask13
                     //string sql = "UPDATE Dentist SET TelNum=@TelNum WHERE Name=@Name";
                     string sql = "DELETE FROM Dentist WHERE Name=@Name";
                     SqlCommand sqlCommand = new SqlCommand(sql, sqlConnection);
-                    SqlParameter sqlParameter = new SqlParameter
+                    //SqlParameter sqlParameter = new SqlParameter
                     //{
                     //    ParameterName = "@TelNum",
                     //    Value = "040 16789321"
@@ -28,12 +28,12 @@ namespace OOP_CheWeiHsuTask13
                     //};//修改電話號碼
                     //sqlCommand.Parameters.Add(sqlParameter);
                     //sqlParameter = new SqlParameter
-                    {
-                        ParameterName = "@Name",
-                        Value = "Gyro Gearloose"
-                    };
-                    sqlCommand.Parameters.Add(sqlParameter);
-                    sqlCommand.ExecuteNonQuery();
+                    //{
+                    //    ParameterName = "@Name",
+                    //    Value = "Gyro Gearloose"
+                    //};
+                    //sqlCommand.Parameters.Add(sqlParameter);
+                    //sqlCommand.ExecuteNonQuery();
 
                     //Do I have Gyro telephone number changed?
 

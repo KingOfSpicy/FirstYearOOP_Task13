@@ -1,0 +1,9 @@
+In this work has few branches, to simply move master to head:
+
+git branch -f master HEAD (so this would solve the 'detached HEAD')
+
+To merge other works to master, checkout the master branch and:
+
+git merge UpdateGyro InsertGyro DeleteGryoDone
+
+terminal will show 'Already up to date'.
